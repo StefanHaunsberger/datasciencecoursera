@@ -2,6 +2,7 @@
 setwd("~/r-workspace/coursera/data-science-jhu/09_DevelopingDataProducts/shiny-app")
 
 require(googleVis)
+require(dplyr)
 
 ## Please note that by default the googleVis plot command
 ## will open a browser window and requires Flash and Internet
@@ -16,16 +17,27 @@ dei = read.csv(file.path("extdata", "WPP2015_INT_F1_Annual_Demographic_Indicator
 #   - countries (LocID >= 900 are Groupings, such as Europe)
 #   - medium population projection
 ## dei has less entries so pop has to be cut dow, so they have the same number of records.
-dei.sub = subset.data.frame(dei, VarID == 2 & LocID < 900,
-                            c(LocID, Location, Time, TFR));
-pop.sub = subset.data.frame(pop, VarID == 2 & LocID < 900 & LocID %in% unique(dei.sub$LocID),
-                            c(LocID, Location, Time, PopTotal));
+### Next two commands are equal
+# dei.sub = subset.data.frame(dei, VarID == 2 & LocID < 900,
+#                             c(LocID, Location, Time, TFR));
+dei.sub = dei %>%
+          filter(VarID == 2, LocID < 900) %>%
+          select(Location, Time, Deaths:TFR);
+# pop.sub = subset.data.frame(pop, VarID == 2 & LocID < 900 & Location %in% unique(dei.sub$Location),
+#                             c(Location, Time, PopMale:PopDensity));
+pop.sub = pop %>%
+          filter(VarID == 2, LocID < 900, Location %in% unique(dei.sub$Location)) %>%
+          select(Location, Time, PopMale:PopDensity);
 
-d = cbind.data.frame(LocID = dei.sub$LocID, Location = dei.sub$Location, Time = dei.sub$Time, TFR = dei.sub$TFR, PopTotal = pop.sub$PopTotal);
+# Merge both data frames
+df = merge(pop.sub, dei.sub);
+
 trans = c("\xe7" = "c", "\xf4" = "o", "\xe9" = "e");
 for (i in 1:length(trans)) {
-  d$Location = gsub(pattern = names(trans)[i], replacement = trans[i], x = d$Location)
+  df$Location = gsub(pattern = names(trans)[i], replacement = trans[i], x = df$Location)
 }
+
+save(df, file = file.path("extdata", "dataset.rdata"), compress = "xz");
 
 # d.s = d[1:200, c("Location","TFR", "PopTotal")];
 d.s = d[1:200,];
