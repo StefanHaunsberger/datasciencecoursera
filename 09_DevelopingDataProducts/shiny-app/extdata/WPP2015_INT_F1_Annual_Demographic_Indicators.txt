@@ -1,0 +1,55 @@
+File WPP2015_INT_F1_ANNUAL_DEMOGRAPHIC_INDICATORS.csv
+
+Description: Interpolated demographic indicators (estimates and all 8 projection variants or scenarios), major area, region and country, Annually for 1950-2100
+Source: Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat, World Population Prospects: The 2015 Revision, http://esa.un.org/unpd/wpp/index.htm, July 2015.
+
+File format is ASCII CSV text file (comma delimited separator with text fields in quotes). File size is 50.8MB
+
+This data file contains 289,200 data records, plus one header record containing the 25 field names as specified below:
+
+-------------------------------------------------------------------------------
+Field name            Description
+-------------------------------------------------------------------------------
+LocID                 Numerical Location Code (3-digit codes following ISO 3166-1 numeric standard) - see http://en.wikipedia.org/wiki/ISO_3166-1_numeric
+Location              Name of country, region, major area or other aggregate
+VarID                 Projection variant code
+                      2=Medium; 3=High; 4=Low; 5=Constant fertility;
+                      6=Instant-replacement; 7=Zero-migration; 8=Constant-mortality; 9=No change
+Variant               Projection variant name
+Time                  Calendar year (1 July)
+MidPeriod             Mid-year
+Deaths                Mortality indicators: Deaths per year, both sexes combined (thousands)
+DeathsMale            Mortality indicators: Female deaths per year (thousands)
+DeathsFemale          Mortality indicators: Male deaths per year (thousands)
+CDR                   Mortality indicators: Crude death rate [CDR] (deaths per 1,000 population)
+LEx                   Mortality indicators: Life expectancy at birth [e(0)] (both sexes combined, years)
+LExMale               Mortality indicators: Male life expectancy at birth [e(0)] (years)
+LExFemale             Mortality indicators: Female life expectancy at birth [e(0)] (years)
+InfantDeaths          Mortality indicators: Infant deaths, both sexes combined (under age 1, thousands)
+IMR                   Mortality indicators: Infant mortality rate [IMR, 1q0] (infant deaths per 1,000 live births)
+Q5                    Mortality indicators: Under-five mortality [U5MR, 5q0] (deaths under age 5 per 1,000 live births)
+Survivors1            Mortality indicators: Total survivors to age 1 (thousands)
+Births                Fertility indicators: Births per year (thousands)
+CBR                   Fertility indicators: Crude birth rate [CBR] (births per 1,000 population)
+TFR                   Fertility indicators: Total fertility (children per woman)
+TotPopChange          Natural change indicators: Total population natural change [i.e., Births-Deaths] (thousands)
+RateNatIncr           Natural change indicators: Rate of natural increase [i.e., CBR-CDR] (per 1,000 population)
+PopChange             Population change indicators (including migration): Population change per year (thousands)
+PopGrowthRate         Population change indicators (including migration): Annual rate of population change (percentage)
+TotalPopDoublingTime  Population change indicators (including migration): Total population annual doubling time [n=(ln(2)/r] (years)
+-------------------------------------------------------------------------------
+Sorted by:  VarID  LocID  Time
+
+
+Sample records (beginning and end of file):
+
+LocID,Location,VarID,Variant,Time,MidPeriod,Deaths,DeathsMale,DeathsFemale,CDR,LEx,LExMale,LExFemale,InfantDeaths,IMR,Q5,Survivors1,Births,CBR,TFR,TotPopChange,RateNatIncr,PopChange,PopGrowthRate,TotalPopDoublingTime
+4,"Afghanistan",2,"Medium",1950,1950.5,299.312,161.737,137.575,38.307,27.522,26.893,28.296,113.755,291.456,420.970,276.916,390.670,50.008,7.450,91.358,11.701,86.820,1.120,61.9
+4,"Afghanistan",2,"Medium",1951,1951.5,298.193,161.084,137.109,37.940,27.795,27.163,28.573,113.559,288.792,417.337,280.031,393.588,50.090,7.450,95.395,12.150,91.318,1.165,59.5
+4,"Afghanistan",2,"Medium",1952,1952.5,296.134,159.867,136.267,37.219,28.335,27.697,29.120,113.192,283.510,410.174,286.429,399.622,50.251,7.450,103.488,13.032,99.419,1.253,55.3
+4,"Afghanistan",2,"Medium",1953,1953.5,294.430,158.827,135.604,36.526,28.865,28.220,29.656,112.909,278.319,403.217,293.140,406.049,50.404,7.450,111.619,13.878,107.594,1.338,51.8
+...
+5501,"Southern Asia",9,"No change",2096,2096.5,43594.233,22843.295,20750.939,12.504,66.578,65.286,67.973,3740.310,53.102,68.065,66698.152,70438.461,20.206,2.937,26844.228,7.702,26319.447,0.755,91.8
+5501,"Southern Asia",9,"No change",2097,2097.5,43874.379,22988.233,20886.145,12.489,66.558,65.267,67.952,3788.941,53.232,68.246,67391.181,71180.122,20.264,2.944,27305.743,7.775,26791.981,0.763,90.9
+5501,"Southern Asia",9,"No change",2098,2098.5,44159.177,23135.369,21023.806,12.475,66.538,65.247,67.931,3838.584,53.363,68.429,68098.592,71937.178,20.324,2.950,27778.001,7.849,27277.423,0.771,89.9
+5501,"Southern Asia",9,"No change",2099,2099.5,44448.628,23284.701,21163.928,12.460,66.518,65.228,67.910,3889.234,53.494,68.611,68820.393,72709.629,20.385,2.957,28261.001,7.925,27776.439,0.779,89.0
