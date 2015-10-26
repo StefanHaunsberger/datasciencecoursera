@@ -1,0 +1,30 @@
+# Used Dataset
+
+The dataset used for the illustration contains annual interpolated demographic indicators, country and region for 1950 to 2030.
+After the download it got preprocessed (decreading number of indicators and merging different sources) and gets loaded in the `global.R` function.  
+
+Source: Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat, World Population Prospects: The 2015 Revision, <http://esa.un.org/unpd/wpp/index.htm>, July 2015.
+
+The fields of the prepared data set are the following:
+
+|Field.name   |Description                                                                                  |
+|:------------|:--------------------------------------------------------------------------------------------|
+|Location     |Name of country                                                                              |
+|Year         |Calendar year (1 July)                                                                       |
+|PopMale      |Total male population (thousands)                                                            |
+|PopFemale    |Total female population (thousands)                                                          |
+|PopTotal     |Total population, both sexes (thousands)                                                     |
+|GrowthRate   |Annual average annual rate of population change(%)                                           |
+|PopDensity   |Population density (persons per squre km                                                     |
+|Deaths       |Mortality indicators: Deaths per year, both sexes combined (thousands)                       |
+|DeathsMale   |Mortality indicators: Female deaths per year (thousands)                                     |
+|DeathsFemale |Mortality indicators: Male deaths per year (thousands)                                       |
+|LEx          |Mortality indicators: Life expectancy at birth (both sexes combined, years)                  |
+|LExMale      |Mortality indicators: Male life expectancy at birth (years)                                  |
+|LExFemale    |Mortality indicators: Female life expectancy at birth (years)                                |
+|Births       |Fertility indicators: Births per year (thousands)                                            |
+|TFR          |Fertility indicators: Total fertility (children per woman)                                   |
+|PopChange    |Natural change indicators: Total population natural change [i.e., Births-Deaths] (thousands) |
+|Region       |Region the country can be assigned to                                                        |
+
+

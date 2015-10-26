@@ -1,0 +1,17 @@
+# Data Visualization
+
+This whole shiny app is set up with tabs. The dataset can be visualized in three different ways:
+
+1. Map View
+The map view illustrates the data on a world map. In the sidebar the user can adjust the data that shall be depicted in the world map in the main panel. This includes a slider for choosing a year and a dropdown menue with the variable that shall be used for the color value. Higher values intend to be shown in orange/red whereas the lower the value it goes towards green. Right below the slider there is an arrow which enables the user to run a year by year simulation.  
+Besides the map the 'Top 10' values are represented in a table in the sidebar below the dropdown menue.  
+2. Table view
+In this tab the total population values are displayed in a table. In the sidebar panel different parameters can be adjusted to customize the table output:
+    + slider: The slider can be used to depict a certain year
+    + multi-dropdown menue: This multi select dropdown menue can be used to choose one or more different regions.
+    + pageable: Once this checkbox is ticked only a limited number of records is shown in the table per page. The number of records can be adjusted by the user in the numeric input field 'Countries per page'.
+3. Motion Chart
+The motion chart provides a good oppurtunity to plot different variable against each other. By clicking on the little play button below the horizontal axis a simulation runs over all provided years, starting from 1950 to 2030.
+Depending on the internet connection it could take a couple of moments until the motion chart gets displayed.
+
+In general, all values that are represented in a table can be sorted by clicking on the respective column.

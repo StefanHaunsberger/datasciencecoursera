@@ -1,0 +1,21 @@
+---
+title: "General"
+author: "Stefan Haunsberger"
+date: "October 25, 2015"
+output: html_document
+---
+# General
+
+This web app is was done as part of a project of the 'Developing Data Products' module of the Coursera specialization course 'Data  Science'. The main project outline was as follows:
+
+>The application must include the following:
+
+>1. Some form of input (widget: textbox, radio button, checkbox, ...)
+>2. Some operation on the ui input in sever.R
+>3. Some reactive output displayed as a result of server calculations
+>4. You must also include enough documentation so that a novice user could use your application.
+>5. The documentation should be at the Shiny website itself. Do not post to an external link.
+
+For more information check out the course on <http://www.coursera.org/course/devdataprod>.
+
+In general there is no guarantee for the correctness of the data and it only serves as an illustration.
